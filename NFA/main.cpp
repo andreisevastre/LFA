@@ -5,9 +5,8 @@
 
 using namespace std;
 
-int stari[100], stare_init, n, m, p, finale[100], tranz, j, st[100], teste;  // p - cate stari finale am
-char sir[100];   // finale - vector cu starile finale
-char alfabet[100];
+int stari[1000], stare_init, n, m, p, finale[100], tranz, j, st[100], teste; // p - numarul de stari finale; m - numarul de simboluri
+char sir[1000], alfabet[1000];
 
 
 struct nod
@@ -19,7 +18,7 @@ struct nod
 nod *mat[105][200], *a, *b;
 
 
-void parcurgere(int x, int p)
+void parcurgere(int x, int p)   // p este 0 prima oara cand intra in parcurgere
 {
     if (sir[p]!='\0')
        {
@@ -110,8 +109,8 @@ int main()
                     sem=1;
                 }
 
-        if (sem==1) cout<<"da";  //afiseaza da cand cuvantul e acceptat de automat. "nu" in caz contrar
-                else cout<<"nu";
+        if (sem==1) cout<<"acceptat";  //afiseaza da cand cuvantul e acceptat de automat. "nu" in caz contrar
+                else cout<<"neacceptat";
 
         cout<<endl;
     }
